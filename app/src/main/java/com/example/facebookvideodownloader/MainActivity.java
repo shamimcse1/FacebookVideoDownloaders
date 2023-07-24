@@ -89,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
                                 .subscribe(youtubeDLResponse -> {
                                     dialog.dismiss();
                                     Toast.makeText(MainActivity.this, "Downloaded Successfully!", Toast.LENGTH_SHORT).show();
+                                    urlET.setText("");
                                 }, e -> {
                                     dialog.dismiss();
                                     Toast.makeText(MainActivity.this, "Download Failed " + e.getCause(), Toast.LENGTH_SHORT).show();
